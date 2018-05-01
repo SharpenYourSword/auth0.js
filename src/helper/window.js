@@ -1,19 +1,19 @@
 var objectHelper = require('./object');
 
 function redirect(url) {
-  global.window.location = url;
+  window.location = url;
 }
 
 function getDocument() {
-  return global.window.document;
+  return window.document;
 }
 
 function getWindow() {
-  return global.window;
+  return window;
 }
 
 function getOrigin() {
-  var location = global.window.location;
+  var location = window.location;
   var origin = location.origin;
   if (!origin) {
     origin = objectHelper.getOriginFromUrl(location.href);
